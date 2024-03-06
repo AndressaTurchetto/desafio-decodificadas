@@ -1,46 +1,76 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2? family= Krona+One & família= Montserrat:wght@400;600 & display=swap');
 
-/*
+:root {
+    --cor0: #ffffff;
+    --cor1: #FEFAE0;
+    --cor2: #A9B388;
+    --cor3: #B99470;
+    --cor4: #5F6F52;
 
-#5F6F52
-#A9B388
-#FEFAE0
-#B99470
-white
-black
-
-*/
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-primaria);
+    line-height: 1.6; /* Espaçamento entre linhas */
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-width: 100vh;
+    min-height: 100vh;
 }
 
 header {
-    background-image: ;
+    background-image: url('img/logo.webp');
     background-size: cover;
-    color: white;
+    color: var(--cor4);
     text-align: center;
     padding: 100px 0;
     position: relative;
 }
 
+.paragraph {
+    font-size: 16px; /* Tamanho do texto */
+    padding: 80px;
+    color: var(--cor4); /* Cor do texto */
+    text-align: left; /* Alinhamento justificado */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-decoration: none;
+}
+
+/* Estilo para links dentro dos parágrafos */
+.paragraph a {
+    color: var(--cor4); /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilo para links quando o mouse passa por cima */
+.paragraph a:hover {
+    text-decoration: underline; /* Adiciona sublinhado quando o mouse passa por cima */
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
 nav {
-    background-color: #B99470;
+    background-color: var(--cor4);
     text-align: center;
     padding: 10px 0;
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-    color: white;
+    color: var(--cor1);
     text-decoration: none;
     margin: 0 10px;
     padding: 10px 15px;
@@ -49,7 +79,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: var(--cor2);
 }
 
 nav img {
@@ -70,13 +100,36 @@ nav img {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px;   
+}
+
+.image {
+    flex: 1; /* Faz com que as imagens ocupem todo o espaço disponível */
+    object-fit: cover; /* Corta a imagem para preencher o contêiner */
+    width: 100%; /* Garante que a imagem ocupe todo o espaço disponível */
+    height: 200px; /* Altura fixa para todas as imagens */
+    margin: 5px; /* Adiciona um espaçamento entre as imagens */
+    transition: border 0.3s, opacity 0.3s; /* Adiciona uma transição suave */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
+    opacity: 0.8;
 }
 
 .gallery-item {
     flex: 0 1 30%;
     max-width: 30%;
     text-align: center;
+}
+
+iframe {
+    transition: border 0.3s, opacity 0.3s; /* Adiciona uma transição suave */
+}
+
+iframe:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
+    opacity: 0.8;
 }
 
 #map {
@@ -87,10 +140,11 @@ nav img {
 
 footer {
     text-align: center;
-    background-color: #333;
-    color: white;
+    background-color: var(--cor4);
+    color: var(--cor1);
     padding: 10px 0;
 }
+
 form {
     margin-top: 20px;
     text-align: center;
@@ -107,10 +161,11 @@ form input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 form button {
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: var(--cor4);
+    color: var(--cor1);
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -118,36 +173,36 @@ form button {
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: var(--cor2);
 }
 
-@media only screen and (min-width: 768px) {
-    .gallery-item {
-        flex: 0 1 30%;
-        max-width: 30%;
+    @media only screen and (min-width: 768px) {
+        .gallery-item {
+            flex: 0 1 30%;
+            max-width: 30%;
+        }
+
+        form {
+            max-width: 50%;
+        }
     }
 
-    form {
-        max-width: 50%;
+    #btnTopo {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--cor4);
+        color: var(--cor1);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
     }
-}
 
-#btnTopo {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#btnTopo:hover {
-    background-color: #555;
-}
+    #btnTopo:hover {
+        background-color: var(--cor2);
+    }

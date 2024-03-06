@@ -1,61 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Portifólio Decodificadas</title>
-    <link rel="stylesheet" href="estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilos.css">
+<title>Desafio Descodificadas</title>
 </head>
 <body>
     <header>
-        <img src="#" alt="Imagem">
+        <img src="img/logo.jpeg" alt="Foto de Andressa Turchetto">
         <h1>Andressa Turchetto</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veniam ratione in ipsam quasi accusamus voluptates ea, eveniet animi dolores iure, a veritatis nemo obcaecati eaque suscipit natus reprehenderit ducimus.</p>
+        <p class="paragraph">Olá! Meu nome é Andressa Turchetto, tenho 29 anos, sou casada e mãe amorosa. Com mais de 12 anos de experiência em vendas, estou em um emocionante período de transição de carreira. Estou atualmente focada em estudar e me dedicar à programação e desenvolvimento de software, buscando um estágio em engenharia de software para aplicar meus conhecimentos acadêmicos.
+        </p>
     </header>
     <nav>
         <a href="#sobre">Sobre</a>
-        <a href="#portifolio">Portifólio</a>
+        <a href="#portfolio">Portfólio</a>
         <a href="#contato">Contato</a>
     </nav>
     <div class="highlighted-text" id="sobre">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor doloremque vel facilis fugit quod natus harum, necessitatibus veniam ullam, est corrupti tempore. Nostrum laborum nemo temporibus rem ducimus beatae.</p>
+        <p class="paragraph">Estou atualmente focada em estudar e desenvolver meus conhecimentos em frontend, buscando um estágio para aplicar meus conhecimentos acadêmicos. Estou motivada a aprender com profissionais da área, contribuir para projetos significativos e aprimorar minhas habilidades técnicas e de resolução de problemas. Estou animada com a possibilidade de me tornar uma desenvolvedora de software qualificada e fazer a diferença no mundo da tecnologia.</p>
     </div>
     <div class="content">
-        <h2>Portifólio</h2>
+        <h2>Projetos de estudos</h2>
         <div class="gallery" id="portfolio">
             <div class="gallery-item">
-                <a href="#">Imagem</a>
-                <img src="#" alt="Imagem1">
-                <p>Descrição</p>
+                <a href="https://andressaturchetto.github.io/encriptador-de-texto/" target="_blank">
+                    <img class="image" src="img/portfolio1.jpeg" alt="Foto de projeto 1">
+                </a>
             </div>
             <div class="gallery-item">
-                <a href="#">Imagem</a>
-                <img src="#" alt="Imagem1">
-                <p>Descrição</p>
+                <a href=https://andressaturchetto.github.io/projeto-android/ target="_blank">
+                    <img class="image" src="img/portfolio2.jpeg" alt="Foto de projeto 2">
+                </a>
             </div>
             <div class="gallery-item">
-                <a href="#">Imagem</a>
-                <img src="#" alt="Imagem1">
-                <p>Descrição</p>
-            </div>       
+                <a href="https://andressaturchetto.github.io/projeto-login/" target="_blank">
+                    <img class="image" src="img/portfolio3.jpeg" alt="Foto de projeto 3">
+                </a>
             </div>
-            <h2>Video</h2>
-            <iframe src="#" frameborder="0"></iframe>
-            <h2>Mapa de Localização</h2>
-            <div></div>
-            <h2>Formulário de Cadastro</h2>
-            <form>
-                <input type="text" name="" id="">
-                <input type="email" name="" id="">
-                <button type="submit">Cadastrar</button>
-                <button type="reset">Limpar</button>
-            </form>
         </div>
-        <footer>
-            <p>Criado por Andressa Tuchetto - Para fins didáticos</p>
-        </footer>
-        <script>
-            
-        </script>   
+        <h2>Vídeo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/seuvideo" frameborder="0" allowfullscreen></iframe>
+        <h2>Mapa de Localização</h2>
+        <div id="map"></div>
+        <h2>Formulário de Cadastro</h2>
+        <form>
+            <input type="text" placeholder="Nome" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <footer id="contato">
+        <p>Criado por Seu Nome</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            var location = {lat: -23.5505, lng: -46.6333}; // São Paulo, Brasil
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("btnTopo").style.display = "block";
+            } else {
+                document.getElementById("btnTopo").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API&callback=initMap" async defer></script>
+
+    <!-- Botão "Voltar ao Topo" -->
+    <button id="btnTopo" onclick="scrollToTop()">Voltar ao Topo</button>
 </body>
 </html>
