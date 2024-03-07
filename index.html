@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="estilos.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
-<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
 <title>Desafio Descodificadas</title>
 </head>
 <body>
@@ -13,7 +12,7 @@
         <img src="img/logo.jpeg" alt="Foto de Andressa Turchetto">
         <h1>Andressa Turchetto</h1>
         <div class="caixa" >
-            <p class="paragraph">Olá! Meu nome é Andressa Turchetto, tenho 29 anos, sou casada e mãe amorosa. Com mais de 12 anos de experiência em vendas, estou em um emocionante período de transição de carreira. Estou atualmente focada em estudar e me dedicar à programação e desenvolvimento de software, buscando um estágio em engenharia de software para aplicar meus conhecimentos acadêmicos.
+            <p class="paragrafo">Olá! Meu nome é Andressa Turchetto, tenho 29 anos, sou casada e mãe amorosa. Com mais de 12 anos de experiência em vendas, estou em um emocionante período de transição de carreira. Estou atualmente focada em estudar e me dedicar à programação e desenvolvimento de software, buscando um estágio em engenharia de software para aplicar meus conhecimentos acadêmicos.
             </p>
         </div>
     </header>
@@ -23,7 +22,7 @@
         <a href="#contato">Contato</a>
     </nav>
     <div class="highlighted-text" id="sobre">
-        <p class="paragraph">Estou atualmente focada em estudar e desenvolver meus conhecimentos em frontend, buscando um estágio para aplicar meus conhecimentos acadêmicos. Estou motivada a aprender com profissionais da área, contribuir para projetos significativos e aprimorar minhas habilidades técnicas e de resolução de problemas. Estou animada com a possibilidade de me tornar uma desenvolvedora de software qualificada e fazer a diferença no mundo da tecnologia.</p>
+        <p class="paragrafo">Estou atualmente focada em estudar e desenvolver meus conhecimentos em frontend, buscando um estágio para aplicar meus conhecimentos acadêmicos. Estou motivada a aprender com profissionais da área, contribuir para projetos significativos e aprimorar minhas habilidades técnicas e de resolução de problemas. Estou animada com a possibilidade de me tornar uma desenvolvedora de software qualificada e fazer a diferença no mundo da tecnologia.</p>
     </div>
     <div class="content">
         <h2>Projetos de estudos</h2>
@@ -66,7 +65,7 @@
      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         function initMap() {
-            var location = {lat: -23.5505, lng: -46.6333}; // São Paulo, Brasil
+            var location = {lat: -25.2925, lng: -49.2267};
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,
                 center: location
@@ -76,6 +75,10 @@
                 map: map
             });
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            initMap();
+        });
 
         window.onscroll = function() {scrollFunction()};
 
@@ -91,9 +94,8 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBJCaTY4HXzZTIa4deNV8X_Org-ZgSQn1Q&callback=initMap" async defer></script>
 
-    <!-- Botão "Voltar ao Topo" -->
     <button id="btnTopo" onclick="scrollToTop()"><ion-icon name="arrow-up-outline"></ion-icon></button>
 </body>
 </html>
