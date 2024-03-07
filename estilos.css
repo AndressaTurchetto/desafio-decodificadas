@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2? family= Krona+One & família= Montserrat:wght@400;600 & display=swap');
 
 :root {
-    --cor0: #ffffff;
     --cor1: #FEFAE0;
     --cor2: #A9B388;
     --cor3: #B99470;
@@ -40,20 +39,8 @@ header img {
 
 h1 {
     font-family: var(--fonte-secundaria);
-    font-weight: 600;
+    font-weight: 600 bolder;
     font-size: 2rem;
-}
-
-.caixa {
-    width: 550px;
-    padding: 15px;
-    border: none;
-    text-align: left;
-}
-
-.caixa p {
-    width: 100%;
-    text-align: left;
 }
 
 .paragrafo {
@@ -192,6 +179,25 @@ form button:hover {
     background-color: var(--cor2);
 }
 
+#btnTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background-color: var(--cor2);
+}
+
+#btnTopo:hover {
+    background-color: var(--cor2);
+}
+
 footer {
     text-align: center;
     background-color: var(--cor4);
@@ -218,23 +224,4 @@ ion-icon:hover {
     form {
         max-width: 50%;
     }
-}
-
-#btnTopo {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: 0.3s;
-    background-color: var(--cor2);
-}
-
-#btnTopo:hover {
-    background-color: var(--cor2);
 }
