@@ -4,14 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="estilos.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
 <title>Desafio Descodificadas</title>
 </head>
 <body>
     <header>
         <img src="img/logo.jpeg" alt="Foto de Andressa Turchetto">
         <h1>Andressa Turchetto</h1>
-        <p class="paragraph">Olá! Meu nome é Andressa Turchetto, tenho 29 anos, sou casada e mãe amorosa. Com mais de 12 anos de experiência em vendas, estou em um emocionante período de transição de carreira. Estou atualmente focada em estudar e me dedicar à programação e desenvolvimento de software, buscando um estágio em engenharia de software para aplicar meus conhecimentos acadêmicos.
-        </p>
+        <div class="caixa" >
+            <p class="paragraph">Olá! Meu nome é Andressa Turchetto, tenho 29 anos, sou casada e mãe amorosa. Com mais de 12 anos de experiência em vendas, estou em um emocionante período de transição de carreira. Estou atualmente focada em estudar e me dedicar à programação e desenvolvimento de software, buscando um estágio em engenharia de software para aplicar meus conhecimentos acadêmicos.
+            </p>
+        </div>
     </header>
     <nav>
         <a href="#sobre">Sobre</a>
@@ -41,7 +45,7 @@
             </div>
         </div>
         <h2>Vídeo</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/seuvideo" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qsrw-F3Ul5c?si=2PqR91budAp88ltp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <h2>Mapa de Localização</h2>
         <div id="map"></div>
         <h2>Formulário de Cadastro</h2>
@@ -52,9 +56,14 @@
         </form>
     </div>
     <footer id="contato">
-        <p>Criado por Seu Nome</p>
+        <p>Criado por Andressa Turchetto - Para fins Didáticos</p>
+        <p>
+            <a href="https://www.linkedin.com/in/andressadev/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a> 
+            <a href="https://github.com/AndressaTurchetto" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+        </p>
     </footer>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         function initMap() {
             var location = {lat: -23.5505, lng: -46.6333}; // São Paulo, Brasil
@@ -85,6 +94,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API&callback=initMap" async defer></script>
 
     <!-- Botão "Voltar ao Topo" -->
-    <button id="btnTopo" onclick="scrollToTop()">Voltar ao Topo</button>
+    <button id="btnTopo" onclick="scrollToTop()"><ion-icon name="arrow-up-outline"></ion-icon></button>
 </body>
 </html>
