@@ -1,34 +1,43 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2? family= Krona+One & família= Montserrat:wght@400;600 & display=swap');
 
+/*Cor e*/
 :root {
     --cor1: #FEFAE0;
     --cor2: #A9B388;
     --cor3: #B99470;
     --cor4: #5F6F52;
 
-    --fonte-primaria: 'Krona One', sans-serif;
-    --fonte-secundaria: 'Montserrat', sans-serif;
+    --fonte-primaria: "Fraunces", sans-serif;
+    --fonte-secundaria: "Lato", sans-serif;
+}
+
+/*Configurações gerais*/
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: var(--cor1);
     font-family: var(--fonte-primaria);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+.logo {
+    text-align: center;
+    padding-top: 20px;
+}
+
 header {
     background-image: url('img/fundo-destaque.webp');
-    background-size: cover;
-    color: var(--cor4);
-    text-align: center;
-    padding: 100px 0;
     position: relative;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header img {
@@ -41,10 +50,11 @@ h1 {
     font-family: var(--fonte-secundaria);
     font-weight: 600 bolder;
     font-size: 2rem;
+    text-align: center;
 }
 
 .paragrafo {
-    font-size: 20px;
+    font-size: 22px;
     padding: 80px;
     color: var(--cor4);
     text-align: left;
