@@ -9,6 +9,7 @@
 
 
     --fonte-primaria: 'Poppins', sans-serif;
+    --fonte-destaque: "Fraunces", sans-serif;
 }
 
 /* Configurações gerais */
@@ -46,13 +47,13 @@ header img {
     padding-top: 20px;
 }
 
-
 /* Estilo título principal */
 h1 {
     font-weight: 800;
     font-size: 3rem;
     text-align: center;
     color: var(--cor4);
+    font-family: var(--fonte-destaque);
 }
 
 /* Estilo dos parágrafos */
@@ -60,7 +61,7 @@ h1 {
     font-size: 1.8rem;
     padding: 80px;
     color: var(--cor4);
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px; 
     text-decoration: none;
 }
